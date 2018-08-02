@@ -57,17 +57,20 @@ section {
     width: 100%;
     @include box_flex;
     @include flex;
+    overflow: hidden;
     .left {
         width: 30%;
         height: 100%;
         background: #eee;
-        ul {
+        .list {
             width: 100%;
-            height: pxTorem(45px);
             text-align: center;
             line-height: pxTorem(45px);
             font-size: pxTorem(14px);
             color: #666666;
+            li{
+                padding: pxTorem(20px) 0;
+            }
         }
     }
     .right {
@@ -115,19 +118,12 @@ footer {
         }
     }
 }
-
-section .left ul li:hover {
-    color: #ff5777;
-    background: #fff;
-    font-weight: bold;
-}
-
 .active {
     color: #ff5777;
     background: #fff;
     font-weight: bold;
 }
 
-footer ul li:hover {
+footer ul li.active {
     color: #ff5777;
 }

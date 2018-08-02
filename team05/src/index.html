@@ -23,8 +23,8 @@
             </div>
         </header>
         <section>
-            <div class="left">
-                <ul>
+            <div class="nav left">
+                <ul class="list">
                     <li class="active">正在流行</li>
                     <li>美妆</li>
                     <li>美妆</li>
@@ -38,7 +38,6 @@
                     <li>美妆</li>
                     <li>美妆</li>
                     <li>美妆</li>
-
                 </ul>
             </div>
             <div class="right">
@@ -85,7 +84,7 @@
         </section>
         <footer>
             <ul>
-                <li>
+                <li class="active">
                     <i class="icon iconfont icon-shouye"></i>
                     <p>首页</p>
                 </li>
@@ -108,6 +107,28 @@
             </ul>
         </footer>
     </div>
+    <script src="js/common/better-scroll.js"></script>
+    <script src="js/common/zepto.js"></script>
+    <script>
+        // 动态添加.list的高度
+        var sum = 0;
+        $('.list li').each(function(i, v) {
+            sum += $(v).height();
+        });
+        $('.list').height(sum);
+        var scroll = new BScroll('.nav');
+        // .list的tab切换
+        $('.nav .list').on('tap', 'li', function () {
+            var index = $(this).index();
+            $(this).addClass('active').siblings().removeClass('active');
+            var tag = $('.list li').eq(index)[0];
+            scroll.scrollToElement(tag, 100, true, true);
+        });
+        // 页脚的tab切换
+        $('footer ul').on('tap', 'li', function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+    </script>
 </body>
 
 </html>
