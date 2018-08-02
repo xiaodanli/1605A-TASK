@@ -142,6 +142,7 @@
     </div>
     <script src="./js/flexible.js"></script>
     <script src='./js/better-scroll.js'></script>
+    <script src="./js/zepto.js"></script>
     <script>
         var scroll = new BScroll('.left', {
             scrollY: true
@@ -150,6 +151,9 @@
         var scrolls = new BScroll('.right', {
             scrollY: true
         });
+        $('footer>ul>li').on('tap', function() {
+            $(this).addClass('active').siblings().removeClass('active');
+        })
     </script>
 </body>
 
