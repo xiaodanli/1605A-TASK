@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-* {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-decoration: none;
-    box-sizing: border-box;
-=======
 html,
 body,
 div,
@@ -92,58 +84,10 @@ input {
   font-family: STHeitiSC-Light;
   font: inherit;
   vertical-align: baseline;
->>>>>>> xxx
 }
 
 html,
 body,
-<<<<<<< HEAD
-.wrap {
-    width: 100%;
-    height: 100%;
-}
-
-.wrap {
-    display: flex;
-    flex-direction: column;
-}
-
-header,
-footer {
-    width: 100%;
-    height: 44px;
-    background: red;
-}
-
-section {
-    flex: 1;
-    overflow: hidden;
-}
-
-.left {
-    width: 100px;
-    height: 100%;
-    overflow: hidden;
-}
-
-.list {
-    width: 100%;
-    overflow-y: scroll;
-    background: #F6F6F6;
-}
-
-.list li {
-    width: 100%;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-}
-
-.active {
-    background: #fff;
-    color: red;
-}
-=======
 form,
 fieldset,
 p,
@@ -245,6 +189,33 @@ html {
   font-size: 0.48rem;
 }
 
+section {
+  width: 100%;
+  display: flex;
+}
+
+section .box-right {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+section .box-right dl {
+  width: 33%;
+  padding: 10px 0;
+  text-align: center;
+  line-height: 50px;
+}
+
+section .box-right dl dd img {
+  width: 200px;
+}
+
+section .box-right dl dt {
+  font-size: 0.37333rem;
+}
+
 footer {
   width: 100%;
   height: 1.6rem;
@@ -261,4 +232,3 @@ footer dl dt {
   font-size: 0.53333rem;
   text-align: center;
 }
->>>>>>> xxx

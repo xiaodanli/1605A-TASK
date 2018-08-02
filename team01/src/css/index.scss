@@ -6,6 +6,31 @@
     font-size: pxTorem(18px);
 }
 
+section {
+    width: 100%;
+    display: flex;
+    .box-right {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        dl {
+            width: 33%;
+            padding: 10px 0;
+            text-align: center;
+            line-height: 50px;
+            dd {
+                img {
+                    width: 200px;
+                }
+            }
+            dt {
+                font-size: pxTorem(14px);
+            }
+        }
+    }
+}
+
 footer {
     width: 100%;
     height: pxTorem(60px);
