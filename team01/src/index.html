@@ -6,13 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        header {
+            width: 100%;
+            height: 60px;
+            border-bottom: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 16px;
+            box-sizing: border-box;
+        }
+        
+        header a {
+            font-size: 22px;
+        }
+        
+        header span {
+            display: block;
+            border: 1px solid #aaa;
+            padding: 6px 26px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 25px;
+        }
+        
+        header span b {
+            width: 30px;
+            height: 32px;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
 </head>
 
 <body>
     <div id="wrap">
-        <header>头</header>
-        <section>中间</section>
-        <footer>尾</footer>
+        <header>
+            <a>所有商品</a>
+            <span><b style="border-right:1px solid #aaa">1</b><b>2</b></span>
+        </header>
+        <section></section>
+        <footer></footer>
     </div>
 </body>
 
