@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+footer {
+    width: 100%;
+    height: 1.4rem;
+}
+
+footer ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer ul li {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li.active {
+    color: #ea449f;
+}
+
+footer ul li>i.iconfont {
+    display: block;
+    font-size: .5rem;
+}
+
+section {
+    flex: 1;
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    overflow: hidden;
+}
+
+section .left {
+    width: 2.4rem;
+    height: 100%;
+    background: #F6F6F6;
+}
+
+section .left .left-list {
+    width: 100%;
+    height: auto;
+}
+
+section .left .left-list li {
+    width: 100%;
+    height: 1.33333rem;
+    line-height: 1.33333rem;
+    text-align: center;
+    color: #6E6E6E;
+}
+
+section .right {
+    flex: 1;
+}
+
+section .right .right-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    flex-wrap: wrap;
+}
+
+section .right .right-list dl {
+    width: 33.3%;
+    height: 2.66667rem;
+    margin-top: 0.53333rem;
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+section .right .right-list dl dt {
+    width: 100%;
+    height: 2.13333rem;
+}
+
+section .right .right-list dl dt img {
+    width: 90%;
+}
+
+section .right .right-list dl dd {
+    height: 1.06667rem;
+    line-height: 1.06667rem;
+}
+
+.left .left-list .active {
+    color: #FF5777;
+}
