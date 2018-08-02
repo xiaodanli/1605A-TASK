@@ -18,3 +18,28 @@ body {
     overflow: hidden;
     flex-direction: column;
 }
+
+section {
+    width: 100%;
+    height: 100%;
+}
+
+section .left {
+    width: 24%;
+    height: 100%;
+}
+
+section .left ul {
+    width: 100%;
+    height: 100%;
+    background: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+section .left ul li:nth-child(1) {
+    color: red;
+}
