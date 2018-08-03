@@ -6,6 +6,12 @@
     font-size: pxTorem(18px);
 }
 
+header {
+    width: 100%;
+    height: pxTorem(60px);
+    background: #eee;
+}
+
 section {
     width: 100%;
     display: flex;
