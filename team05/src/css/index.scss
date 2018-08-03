@@ -1,0 +1,129 @@
+@import '_minix.scss';
+@import 'common.scss';
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    height: pxTorem(45px);
+    padding: pxTorem(6px) pxTorem(15px);
+    @include box_flex;
+    @include sizing;
+    border-bottom: 1px solid #ccc;
+    .left {
+        @include box_flex;
+        @include flex;
+        @include align;
+        height: 100%;
+        padding: 0 pxTorem(10px);
+        @include sizing;
+        background: #eee;
+        border-radius: pxTorem(10px);
+        .icon {
+            margin-right: pxTorem(15px);
+            font-size: pxTorem(14px);
+        }
+    }
+    .right {
+        width: pxTorem(45px);
+        height: pxTorem(35px);
+        text-align: center;
+        line-height: pxTorem(35px);
+        .icon {
+            color: #b3b3b3;
+            font-size: pxTorem(14px);
+        }
+    }
+}
+
+section {
+    width: 100%;
+    @include box_flex;
+    @include flex;
+    overflow: hidden;
+    .left {
+        width: 30%;
+        height: 100%;
+        background: #eee;
+        .list {
+            width: 100%;
+            text-align: center;
+            line-height: pxTorem(45px);
+            font-size: pxTorem(14px);
+            color: #666666;
+            li{
+                padding: pxTorem(20px) 0;
+            }
+        }
+    }
+    .right {
+        @include box_flex;
+        @include flex;
+        .inner {
+            @include box_flex;
+            @include justify(space-between);
+            padding: pxTorem(8px);
+            flex-wrap: wrap;
+            dl {
+                width: 32%;
+                height: auto;
+                text-align: center;
+                dd {
+                    text-align: center;
+                }
+                dt {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: pxTorem(45px);
+    padding: 0 pxTorem(15px);
+    @include box_flex;
+    @include sizing;
+    border-top: 1px solid #ccc;
+    ul {
+        width: 100%;
+        height: auto;
+        @include box_flex;
+        @include align;
+        @include justify(space-between);
+        text-align: center;
+        li {
+            font-size: pxTorem(14px);
+            .icon {
+                font-size: pxTorem(14px);
+            }
+        }
+    }
+}
+.active {
+    color: #ff5777;
+    background: #fff;
+    font-weight: bold;
+}
+
+footer ul li.active {
+    color: #ff5777;
+}

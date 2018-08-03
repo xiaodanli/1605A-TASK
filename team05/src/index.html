@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+</head>
+<script src="js/common/flexible.js"></script>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="left">
+                <i class="icon iconfont icon-fangdajing"></i>
+                <input type="text" placeholder="手机壳">
+            </div>
+            <div class="right">
+                <i class="icon iconfont icon-xiaoxi1"></i>
+            </div>
+        </header>
+        <section>
+            <div class="nav left">
+                <ul class="list">
+                    <li class="active">正在流行</li>
+                    <li>美妆</li>
+                    <li>美妆</li>
+                    <li>美妆</li>
+                    <li>美妆</li>
+                    <li>美妆</li>
+                    <li>美妆</li>
+                    <li>美妆</li>
+                    <li>美妆</li>
+                    <li>美妆</li>
+                    <li>美妆</li>
+                    <li>美妆</li>
+                    <li>美妆</li>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="inner">
+                    <dl>
+                        <dd><img src="imgs/1_03.gif" alt=""></dd>
+                        <dt>时尚套装</dt>
+                    </dl>
+                    <dl>
+                        <dd><img src="imgs/1_03.gif" alt=""></dd>
+                        <dt>时尚套装</dt>
+                    </dl>
+                    <dl>
+                        <dd><img src="imgs/1_03.gif" alt=""></dd>
+                        <dt>时尚套装</dt>
+                    </dl>
+                    <dl>
+                        <dd><img src="imgs/1_03.gif" alt=""></dd>
+                        <dt>时尚套装</dt>
+                    </dl>
+                    <dl>
+                        <dd><img src="imgs/1_03.gif" alt=""></dd>
+                        <dt>时尚套装</dt>
+                    </dl>
+                    <dl>
+                        <dd><img src="imgs/1_03.gif" alt=""></dd>
+                        <dt>时尚套装</dt>
+                    </dl>
+                    <dl>
+                        <dd><img src="imgs/1_03.gif" alt=""></dd>
+                        <dt>时尚套装</dt>
+                    </dl>
+                    <dl>
+                        <dd><img src="imgs/1_03.gif" alt=""></dd>
+                        <dt>时尚套装</dt>
+                    </dl>
+                    <dl>
+                        <dd><img src="imgs/1_03.gif" alt=""></dd>
+                        <dt>时尚套装</dt>
+                    </dl>
+
+                </div>
+            </div>
+        </section>
+        <footer>
+            <ul>
+                <li class="active">
+                    <i class="icon iconfont icon-shouye"></i>
+                    <p>首页</p>
+                </li>
+                <li>
+                    <i class="icon iconfont icon-shouye"></i>
+                    <p>首页</p>
+                </li>
+                <li>
+                    <i class="icon iconfont icon-shouye"></i>
+                    <p>首页</p>
+                </li>
+                <li>
+                    <i class="icon iconfont icon-shouye"></i>
+                    <p>首页</p>
+                </li>
+                <li>
+                    <i class="icon iconfont icon-shouye"></i>
+                    <p>首页</p>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <script src="js/common/better-scroll.js"></script>
+    <script src="js/common/zepto.js"></script>
+    <script>
+        // 动态添加.list的高度
+        var sum = 0;
+        $('.list li').each(function(i, v) {
+            sum += $(v).height();
+        });
+        $('.list').height(sum);
+        var scroll = new BScroll('.nav');
+        // .list的tab切换
+        $('.nav .list').on('tap', 'li', function () {
+            var index = $(this).index();
+            $(this).addClass('active').siblings().removeClass('active');
+            var tag = $('.list li').eq(index)[0];
+            scroll.scrollToElement(tag, 100, true, true);
+        });
+        // 页脚的tab切换
+        $('footer ul').on('tap', 'li', function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+    </script>
+</body>
+
+</html>
