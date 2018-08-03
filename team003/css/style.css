@@ -1,12 +1,43 @@
+@charset "UTF-8";
 * {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-size: .14rem;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    font-family: '宋体';
+}
+
+html {
+    font-size: 625%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+input,
+button,
+textarea,
+select {
+    outline: none;
+}
+
+html,
+body,
 .wrap {
     width: 100%;
     height: 100%;
+}
+
+.wrap {
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -116,4 +147,44 @@ section .right .right-list dl dd {
 
 .left .left-list .active {
     color: #FF5777;
+}
+
+header {
+    width: 100%;
+    height: .45rem;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    align-items: center;
+    padding-left: .1rem;
+}
+
+header label {
+    flex: 1;
+    width: 100%;
+    position: relative;
+}
+
+header label .icon {
+    position: absolute;
+    top: .07rem;
+    left: .1rem;
+}
+
+header label input {
+    width: 100%;
+    height: .33rem;
+    text-indent: .33rem;
+    background: #eee;
+    border: 0;
+    border-radius: 5px;
+}
+
+header span {
+    flex-basis: .45rem;
+    text-align: center;
+    line-height: .45rem;
+}
+
+header span .icon {
+    font-size: .18rem;
 }
